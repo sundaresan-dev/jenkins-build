@@ -1,109 +1,93 @@
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WAR Deployment Success</title>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Poppins', sans-serif;
-}
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:white;
-}
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-/* Floating animation background glow */
-body::before{
-    content:'';
-    position:absolute;
-    width:300px;
-    height:300px;
-    background:#00c6ff;
-    filter:blur(120px);
-    top:10%;
-    left:20%;
-    opacity:0.5;
-}
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg,#141e30,#243b55);
+            color:white;
+        }
 
-body::after{
-    content:'';
-    position:absolute;
-    width:300px;
-    height:300px;
-    background:#0072ff;
-    filter:blur(120px);
-    bottom:10%;
-    right:20%;
-    opacity:0.5;
-}
+        .box{
+            width:520px;
+            padding:40px;
+            border-radius:15px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            box-shadow:0 8px 25px rgba(0,0,0,0.5);
+            text-align:center;
+            transition:0.3s;
+        }
 
-.container{
-    z-index:1;
-}
+        .box:hover{
+            transform:scale(1.05);
+        }
 
-/* Glassmorphism box */
-.box{
-    width:500px;
-    padding:40px;
-    border-radius:20px;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    text-align:center;
-    animation: fadeIn 1s ease-in-out;
-}
+        h1{
+            font-size:36px;
+            color:#00e6ff;
+            margin-bottom:10px;
+        }
 
-h1{
-    font-size:38px;
-    margin-bottom:15px;
-    color:#00e6ff;
-}
+        p{
+            font-size:18px;
+            margin:8px 0;
+        }
 
-p{
-    font-size:18px;
-    margin:10px 0;
-}
+        hr{
+            margin:20px 0;
+            border:0.5px solid rgba(255,255,255,0.3);
+        }
 
-/* Divider */
-hr{
-    border:none;
-    height:1px;
-    background: rgba(255,255,255,0.3);
-    margin:20px 0;
-}
+        b{
+            color:#00e6ff;
+        }
 
-/* Highlight text */
-b{
-    color:#00e6ff;
-}
+        .tag{
+            margin-top:20px;
+            font-size:14px;
+            opacity:0.8;
+        }
+    </style>
 
-/* Tag section */
-.tag{
-    margin-top:20px;
-    font-size:14px;
-    opacity:0.8;
-}
+</head>
 
-/* Animation */
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform: translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform: translateY(0);
-    }
-}
+<body>
 
-/* Hover effect */
-.box:hover{
-    transform: scale(1.03);
-    transition:0.3s;
-}
-</style>
+<div class="box">
+
+    <h1>WAR Deployment Successful 🚀</h1>
+
+    <p>Your Java Web Application is Running Successfully!</p>
+
+    <hr>
+
+    <p><b>Server:</b> Apache Tomcat</p>
+    <p><b>Platform:</b> AWS EC2</p>
+    <p><b>Java Version:</b> <%= System.getProperty("java.version") %></p>
+    <p><b>Server Time:</b> <%= new java.util.Date() %></p>
+
+    <div class="tag">
+        <p>Deployed by <b>Sundaresan</b></p>
+    </div>
+
+</div>
+
+</body>
+</html>
