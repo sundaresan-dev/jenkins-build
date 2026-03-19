@@ -180,21 +180,11 @@
 <div class="card">
     <center>
         
-
-
-
-
-
-
-
-
-
-
     <div class="status-badge">
         ✓ Deployment Status
     </div>
 
-     <h1>Checking -3</h1>
+     <h1>Before Checking </h1>
      <h2>Auto Deployment </h2>
 
 
