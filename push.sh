@@ -1,3 +1,3 @@
 git add .
-git commit -m "update"
+git commit -m "Checking Auto Deployment "
 git push origin main

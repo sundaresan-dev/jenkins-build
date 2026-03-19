@@ -179,8 +179,7 @@
 
 <div class="card">
     <center>
-        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Success Icon" width="80" height="80">
-    
+        
     <div class="status-badge">
         ✓ Deployment Status
     </div>
@@ -188,10 +187,7 @@
     <h1>Auto Deployment </h1>
     <h2>Checking - 1</h2>
     
-    <div class="subtitle">
-        <span class="success-icon">✓</span>
-        WAR Deployment Successful
-    </div>
+   
 
     <div class="divider"></div>
 
