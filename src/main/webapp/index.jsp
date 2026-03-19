@@ -20,7 +20,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: black;
+            background: white;
             color: #2d3436;
             padding: 20px;
         }
