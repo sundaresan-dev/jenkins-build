@@ -72,9 +72,9 @@
 
 <div class="box">
 
-    <h1>WAR Deployment Successful 🚀</h1>
+    <h1>Auto Deployment Checking - 1</h1>
 
-    <p>Your Java Web Application is Running Successfully!</p>
+    <p>WAR Deployment Successful 🚀</p>
 
     <hr>
 
