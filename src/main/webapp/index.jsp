@@ -1,73 +1,109 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>WAR Deployment Success</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-    <style>
-        body{
-            margin:0;
-            padding:0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg,#1e3c72,#2a5298);
-            color:white;
-            text-align:center;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-        .container{
-            margin-top:150px;
-        }
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
 
-        h1{
-            font-size:48px;
-        }
+/* Floating animation background glow */
+body::before{
+    content:'';
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:#00c6ff;
+    filter:blur(120px);
+    top:10%;
+    left:20%;
+    opacity:0.5;
+}
 
-        p{
-            font-size:20px;
-        }
+body::after{
+    content:'';
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:#0072ff;
+    filter:blur(120px);
+    bottom:10%;
+    right:20%;
+    opacity:0.5;
+}
 
-        .box{
-            background:white;
-            color:#333;
-            padding:30px;
-            width:500px;
-            margin:auto;
-            border-radius:10px;
-            box-shadow:0 10px 25px rgba(0,0,0,0.3);
-        }
+.container{
+    z-index:1;
+}
 
-        .tag{
-            margin-top:20px;
-            color:#555;
-        }
-    </style>
+/* Glassmorphism box */
+.box{
+    width:500px;
+    padding:40px;
+    border-radius:20px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    text-align:center;
+    animation: fadeIn 1s ease-in-out;
+}
 
-</head>
+h1{
+    font-size:38px;
+    margin-bottom:15px;
+    color:#00e6ff;
+}
 
-<body>
+p{
+    font-size:18px;
+    margin:10px 0;
+}
 
-<div class="container">
+/* Divider */
+hr{
+    border:none;
+    height:1px;
+    background: rgba(255,255,255,0.3);
+    margin:20px 0;
+}
 
-    <div class="box">
+/* Highlight text */
+b{
+    color:#00e6ff;
+}
 
-        <h1>WAR Deployment Successful</h1>
+/* Tag section */
+.tag{
+    margin-top:20px;
+    font-size:14px;
+    opacity:0.8;
+}
 
-        <p>Your Java Web Application is Running Successfully!</p>
+/* Animation */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
 
-        <hr>
-
-        <p><b>Server:</b> Apache Tomcat</p>
-        <p><b>Platform:</b> AWS EC2</p>
-        <p><b>Java Version:</b> <%= System.getProperty("java.version") %></p>
-        <p><b>Server Time:</b> <%= new java.util.Date() %></p>
-
-        <div class="tag">
-            <p>Deployed by <b>Sundaresan</b></p>
-        </div>
-
-    </div>
-
-</div>
- 
-</body>
-</html>
+/* Hover effect */
+.box:hover{
+    transform: scale(1.03);
+    transition:0.3s;
+}
+</style>
