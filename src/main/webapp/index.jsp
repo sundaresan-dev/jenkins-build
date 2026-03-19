@@ -20,7 +20,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            background: black;
             color: #2d3436;
             padding: 20px;
         }
@@ -183,7 +183,7 @@
     <div class="status-badge">
         ✓ Deployment Status
     </div>
-     <h1>Checking - 1</h1>
+     <h1>Before Checking</h1>
     <h2>Auto Deployment </h2>
     
      </center>
