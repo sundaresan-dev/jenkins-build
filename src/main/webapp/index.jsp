@@ -50,7 +50,7 @@
 
     <div class="box">
 
-        <h1>🚀 WAR Deployment Successful</h1>
+        <h1>WAR Deployment Successful</h1>
 
         <p>Your Java Web Application is Running Successfully!</p>
 
