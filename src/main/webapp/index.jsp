@@ -183,10 +183,10 @@
     <div class="status-badge">
         ✓ Deployment Status
     </div>
-      </center>
+     
     <h1>Auto Deployment </h1>
     <h2>Checking - 1</h2>
-    
+     </center>
    
 
     <div class="divider"></div>
