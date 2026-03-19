@@ -62,7 +62,7 @@
         <p><b>Server Time:</b> <%= new java.util.Date() %></p>
 
         <div class="tag">
-            <p>Developed & Deployed by <b>Sundaresan k</b></p>
+            <p>Developed & Deployed by <b>Sundaresan</b></p>
         </div>
 
     </div>
